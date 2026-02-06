@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar's Orphanage - Giving Hope to Children</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Oscar's Orphanage</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contribute" class="nav-link btn-contribute">Contribute</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to Oscar's Orphanage</h1>
+            <p>Giving Hope, Love, and a Brighter Future to Every Child</p>
+            <a href="#contribute" class="btn btn-primary">Make a Difference Today</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>At Oscar's Orphanage, we are dedicated to providing a safe, nurturing, and loving environment for children who have lost their parents or have been abandoned. Our mission is to give every child the opportunity to grow, learn, and thrive.</p>
+                    
+                    <h3>What We Do</h3>
+                    <p>We provide comprehensive care including:</p>
+                    <ul>
+                        <li>Safe and comfortable housing</li>
+                        <li>Quality education and tutoring</li>
+                        <li>Nutritious meals three times a day</li>
+                        <li>Healthcare and medical attention</li>
+                        <li>Emotional support and counseling</li>
+                        <li>Recreational activities and sports</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <h3>150+</h3>
+                        <p>Children Cared For</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>10</h3>
+                        <p>Years of Service</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>50+</h3>
+                        <p>Staff Members</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+    <div class="container">
+        <h2 class="section-title">Success Stories</h2>
+        <p class="section-subtitle">Lives Transformed Through Your Support</p>
+        
+        <div class="testimonial-slider">
+            <div class="testimonial-track">
+                <div class="testimonial-card active">
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?w=300" alt="Success story">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Thanks to Oscar's Orphanage, I completed my education and now work as a teacher. I'm forever grateful for the love and support I received."</p>
+                        <h4 class="testimonial-name">Sarah M.</h4>
+                        <p class="testimonial-role">Former Resident, Now Teacher</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300" alt="Success story">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"This place gave me hope when I had none. The staff became my family and helped me discover my passion for art."</p>
+                        <h4 class="testimonial-name">John K.</h4>
+                        <p class="testimonial-role">Former Resident, Now Artist</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300" alt="Success story">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"The education and care I received here opened doors I never knew existed. I'm now studying medicine at university."</p>
+                        <h4 class="testimonial-name">Grace N.</h4>
+                        <p class="testimonial-role">Former Resident, Medical Student</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="slider-btn prev-btn" onclick="changeTestimonial(-1)">‹</button>
+            <button class="slider-btn next-btn" onclick="changeTestimonial(1)">›</button>
+            
+            <div class="slider-dots">
+                <span class="dot active" onclick="currentTestimonial(0)"></span>
+                <span class="dot" onclick="currentTestimonial(1)"></span>
+                <span class="dot" onclick="currentTestimonial(2)"></span>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-subtitle">Moments of Joy and Growth</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=500" alt="Children playing">
+                    <div class="gallery-overlay">
+                        <p>Playtime</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500" alt="Children studying">
+                    <div class="gallery-overlay">
+                        <p>Learning Together</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500" alt="Children eating">
+                    <div class="gallery-overlay">
+                        <p>Mealtime</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=500" alt="Children sports">
+                    <div class="gallery-overlay">
+                        <p>Sports Day</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?w=500" alt="Children celebrating">
+                    <div class="gallery-overlay">
+                        <p>Celebrations</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=500" alt="Children reading">
+                    <div class="gallery-overlay">
+                        <p>Reading Time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="map-container">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8177573929987!2d36.8219!3d-1.2921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMTcnMzEuNiJTIDM2wrA0OScxOC44IkU!5e0!3m2!1sen!2ske!4v1234567890" 
+        width="100%" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy"
+        title="Oscar's Orphanage Location">
+    </iframe>
+</div>
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="info-item">
+                        <strong>Address:</strong>
+                        <p>123 Hope Street, Nairobi, Kenya</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>Phone:</strong>
+                        <p>+254 700 000 000</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>Email:</strong>
+                        <p>info@oscarsorphanage.org</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>Hours:</strong>
+                        <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                        <p>Saturday: 9:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <input type="text" id="subject" placeholder="Subject" required>
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div id="contactMessage" class="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+      <!-- FAQ Section -->
+<section id="faq" class="faq">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Got questions? We have answers</p>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How can I sponsor a child?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>You can sponsor a child by visiting our Contribute section or contacting us directly. Sponsorship includes providing for a child's education, food, shelter, and healthcare. We'll provide you with regular updates about the child you sponsor.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I visit the orphanage?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! We welcome visitors during our operating hours (Monday-Friday, 8AM-5PM, Saturday 9AM-2PM). Please contact us in advance to schedule your visit so we can prepare accordingly and ensure a meaningful experience for you and our children.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What items can I donate?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We accept clothing, books, school supplies, toys, sports equipment, and non-perishable food items. All donations should be new or in good condition. Please contact us before bringing large donations to ensure we have storage space available.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I become a volunteer?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We're always looking for dedicated volunteers! Fill out our volunteer form below or contact us directly. We need help with tutoring, mentoring, maintenance, event planning, and various other activities. All volunteers must complete a background check.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Are donations tax-deductible?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, Oscar's Orphanage is a registered non-profit organization. All donations are tax-deductible. We will provide you with a receipt for your donation that you can use for tax purposes.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How are donations used?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>100% of donations go directly toward caring for our children. This includes food, clothing, education, healthcare, facility maintenance, and staff salaries. We publish annual reports showing exactly how funds are allocated.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Volunteer Section -->
+<section id="volunteer" class="volunteer">
+    <div class="container">
+        <h2 class="section-title">Become a Volunteer</h2>
+        <p class="section-subtitle">Join our team and make a difference in children's lives</p>
+        
+        <div class="volunteer-content">
+            <div class="volunteer-info">
+                <h3>Why Volunteer With Us?</h3>
+                <ul class="volunteer-benefits">
+                    <li>Make a real impact on children's lives</li>
+                    <li>Gain valuable experience</li>
+                    <li>Join a supportive community</li>
+                    <li>Flexible scheduling options</li>
+                    <li>Training and support provided</li>
+                </ul>
+                
+                <div class="volunteer-opportunities">
+                    <h4>Volunteer Opportunities:</h4>
+                    <div class="opportunity-tags">
+                        <span class="tag">Tutoring</span>
+                        <span class="tag">Mentoring</span>
+                        <span class="tag">Sports Coach</span>
+                        <span class="tag">Arts & Crafts</span>
+                        <span class="tag">Event Planning</span>
+                        <span class="tag">Maintenance</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="volunteer-form-container">
+                <form id="volunteerForm" class="volunteer-form">
+                    <input type="text" id="volName" placeholder="Full Name*" required>
+                    <input type="email" id="volEmail" placeholder="Email*" required>
+                    <input type="tel" id="volPhone" placeholder="Phone Number*" required>
+                    
+                    <select id="volInterest" required>
+                        <option value="">Select Area of Interest*</option>
+                        <option value="tutoring">Tutoring</option>
+                        <option value="mentoring">Mentoring</option>
+                        <option value="sports">Sports Coach</option>
+                        <option value="arts">Arts & Crafts</option>
+                        <option value="events">Event Planning</option>
+                        <option value="maintenance">Maintenance</option>
+                        <option value="other">Other</option>
+                    </select>
+                    
+                    <select id="volAvailability" required>
+                        <option value="">Availability*</option>
+                        <option value="weekdays">Weekdays</option>
+                        <option value="weekends">Weekends</option>
+                        <option value="both">Both</option>
+                    </select>
+                    
+                    <textarea id="volMessage" rows="4" placeholder="Tell us why you want to volunteer and any relevant experience..."></textarea>
+                    
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                </form>
+                <div id="volunteerMessage" class="form-message"></div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Contribution Section -->
+    <section id="contribute" class="contribute">
+        <div class="container">
+            <h2 class="section-title">Make a Contribution</h2>
+            <div class="fundraising-goal">
+    <h3>Current Fundraising Campaign</h3>
+    <p class="campaign-title">New Dormitory Building Fund</p>
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progressBar">
+            <span class="progress-text" id="progressText">0%</span>
+        </div>
+    </div>
+    <div class="progress-stats">
+        <div class="stat">
+            <strong id="raisedAmount">KSh 0</strong>
+            <p>Raised</p>
+        </div>
+        <div class="stat">
+            <strong id="goalAmount">KSh 5,000,000</strong>
+            <p>Goal</p>
+        </div>
+        <div class="stat">
+            <strong id="donorCount">0</strong>
+            <p>Donors</p>
+        </div>
+    </div>
+</div>
+            <p class="section-subtitle">Your support changes lives. Every donation helps us provide care, education, and hope.</p>
+            
+            <div class="contribute-content">
+                <div class="donation-options">
+                    <h3>Choose Your Impact</h3>
+                    <div class="donation-buttons">
+                        <button class="amount-btn" data-amount="1000">KSh 1,000</button>
+                        <button class="amount-btn" data-amount="2500">KSh 2,500</button>
+                        <button class="amount-btn" data-amount="5000">KSh 5,000</button>
+                        <button class="amount-btn" data-amount="10000">KSh 10,000</button>
+                    </div>
+                    <div class="custom-amount">
+                        <input type="number" id="customAmount" placeholder="Enter custom amount (KSh)" min="100">
+                    </div>
+                </div>
+
+                <div class="payment-section">
+                    <h3>Payment Details</h3>
+                    <div class="payment-methods">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" class="payment-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="payment-logo">
+                    </div>
+                    
+                    <form id="payment-form">
+                        <div id="card-element" class="card-element"></div>
+                        <div id="card-errors" role="alert"></div>
+                        
+                        <div class="donor-info">
+                            <input type="text" id="donorName" placeholder="Full Name" required>
+                            <input type="email" id="donorEmail" placeholder="Email" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-donate" id="submit-button">
+                            <span id="button-text">Donate <span id="donate-amount">KSh 0</span></span>
+                            <span id="spinner" class="spinner hidden"></span>
+                        </button>
+                    </form>
+                    <div id="payment-message" class="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Newsletter Section -->
+<section id="newsletter" class="newsletter">
+    <div class="container">
+        <div class="newsletter-content">
+            <h2>Stay Connected</h2>
+            <p>Subscribe to our newsletter for updates about our children, events, and ways to help</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <div id="newsletterMessage" class="form-message"></div>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Oscar's Orphanage</h4>
+                    <p>Giving hope and love to every child</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>123 Hope Street, Nairobi</p>
+                    <p>info@oscarsorphanage.org</p>
+                    <p>+254 700 000 000</p>
+                </div>
+            </div>
+            <div class="footer-section social-section">
+    <h4>Follow Us</h4>
+    <div class="social-links">
+        <a href="#" class="social-btn facebook" aria-label="Facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+            </svg>
+        </a>
+        <a href="#" class="social-btn twitter" aria-label="Twitter">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+            </svg>
+        </a>
+        <a href="#" class="social-btn instagram" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+        </a>
+        <a href="#" class="social-btn youtube" aria-label="YouTube">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+            </svg>
+        </a>
+    </div>
+    <p class="social-cta">Share our mission and help us reach more hearts</p>
+</div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Oscar's Orphanage. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightboxImg">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+    <button class="lightbox-nav prev" onclick="changeLightboxImage(-1)">&#10094;</button>
+    <button class="lightbox-nav next" onclick="changeLightboxImage(1)">&#10095;</button>
+</div>
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" title="Back to top">↑</button>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/YOUR_WIDGET_ID';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>
